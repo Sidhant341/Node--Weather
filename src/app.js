@@ -34,7 +34,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help page',
-        helpText: 'Hello! How can we help you?',
+        helpText: 'This site uses data from mapbox.com and generates the weather using the darksky api.',
         name: 'Sidhant'
     })
 })
