@@ -5,6 +5,7 @@ const forecast = require('./utils/forecast.js')
 const geocode = require('./utils/geocode.js')
 const app = express()
 //Defining path for templates. Views by default wouldn't require this.
+const port = process.env.PORT || 3000
 
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
@@ -99,6 +100,6 @@ app.get('*',(req,res) => {
         name: 'Sidhant'
     })
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000!')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port + '!')
 })
