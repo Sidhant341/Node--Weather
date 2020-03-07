@@ -18,7 +18,7 @@ const forecast = (latitude,longitude,callback) => {
         } else if(body.error) {
             callback({error:'Unable to find location to load weather data!'})
         } else {
-            callback(undefined, body.daily.data[0].summary + 'It is ' + body.currently.temperature + ' degrees celsius out today. There is ' + body.currently.precipProbability + '% chance of rain today.')
+            callback(undefined, body.daily.data[0].summary + 'It is ' + body.currently.temperature + ' degrees celsius out today. There is ' + body.currently.precipProbability + '% chance of rain today. \nToday\'s temperature high is: ' + body.daily.data[0].temperatureHigh + ' degrees celsius. \n Humidity is: ' + body.daily.data[0].humidity)
         }
     })
 }
